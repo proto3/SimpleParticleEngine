@@ -1,4 +1,4 @@
-#include "structures.h"
+#include <SimpleParticle/structures.h>
 
 vect add(vect *a, vect *b)
 {

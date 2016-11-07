@@ -3,9 +3,9 @@
 #include <pthread.h>
 #include <unistd.h>
 
-#include "physic.h"
-#include "constants.h"
-#include "graphic.h"
+#include <SimpleParticle/physic.h>
+#include <SimpleParticle/constants.h>
+#include <SimpleParticle/graphic.h>
 
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -42,7 +42,7 @@ void* thread_worker(void* argw)
 	while(1)//condition which stop threads
 	{
 		//work
-		step_2(*arg->a, *arg->b, arg->from, arg->to);
+		step_3(*arg->a, *arg->b, arg->from, arg->to);
 
 		pthread_mutex_lock(arg->worker_lock);
 		//--------------------------------//
@@ -55,7 +55,7 @@ void* thread_worker(void* argw)
 			pthread_cond_wait(arg->physic_cond, arg->worker_lock);
 		//--------------------------------//
 		pthread_mutex_unlock(arg->worker_lock);
-	
+
 	}
 	pthread_exit(0);
 }

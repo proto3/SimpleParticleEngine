@@ -3,8 +3,8 @@
 #include <time.h>
 #include <math.h>
 
-#include "structures.h"
-#include "constants.h"
+#include <SimpleParticle/structures.h>
+#include <SimpleParticle/constants.h>
 
 typedef struct v
 {

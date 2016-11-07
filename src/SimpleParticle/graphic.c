@@ -3,10 +3,10 @@
 #include <unistd.h>
 #include <pthread.h>
 
-#include "graphic.h"
-#include "structures.h"
-#include "constants.h"
-#include "physic.h"
+#include <SimpleParticle/graphic.h>
+#include <SimpleParticle/structures.h>
+#include <SimpleParticle/constants.h>
+#include <SimpleParticle/physic.h>
 
 //------------------------------------------//
 static SDL_Surface ecran;
@@ -43,7 +43,7 @@ void* mouse_event_manager(void* a)
 		    case SDL_QUIT:
 		        exit(0);
 				break;
-			case SDL_MOUSEMOTION:	
+			case SDL_MOUSEMOTION:
 				move_mouse(event.motion.x,event.motion.y);
 				break;
 			case SDL_MOUSEBUTTONDOWN:
