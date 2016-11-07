@@ -18,7 +18,7 @@ void init_graphics()
 {
 	SDL_Init(SDL_INIT_VIDEO);
 	//SDL_ShowCursor(SDL_DISABLE);
-	buffer = SDL_SetVideoMode(WIDTH, HEIGHT, 32, SDL_HWSURFACE | SDL_FULLSCREEN);
+	buffer = SDL_SetVideoMode(WIDTH, HEIGHT, 32, SDL_HWSURFACE /*| SDL_FULLSCREEN*/);
 
 	square = SDL_CreateRGBSurface(SDL_HWSURFACE,P_SIZE,P_SIZE,32,0,0,0,0);
 
